@@ -1,6 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Header from './Components/Header'
 import Navigation from './Components/Navigation'
 import NodeDashboard from './Views/NodeDashboard'
 import NodeDetails from './Views/NodeDetails'
