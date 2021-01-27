@@ -4,9 +4,11 @@ function Header() {
 
     return (
 
-        <div>
-            
-        </div>
+        <header>
+            <div className="title">
+                Node Dashboard
+            </div>
+        </header>
 
     )
     
