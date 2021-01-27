@@ -1,27 +1,22 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useInterval } from './Time'
 
 export function useAxiosGet(endpointURL) {
-
     const [request, setRequest] = useState({
         loading: false,
         data: null,
         error: false,
     })
+    const timeout = useRef()
 
-    // TEMPORARY
-    // I didn't want to spam the endpoint with requests,
-    // so I'm using useEffect to make a single request.
-    // I will replace this with an interval soon.
     useEffect(
         () => {
-
             setRequest({
                 loading: true,
                 data: null,
                 error: false,
             })
-
             axios.get(endpointURL)
                 .then(response => {
                     setRequest({
@@ -29,7 +24,6 @@ export function useAxiosGet(endpointURL) {
                         data: response.data,
                         error: false,
                     })
-                    console.table(response.data) // Debug
                 })
                 .catch(() => {
                     setRequest({
@@ -40,6 +34,32 @@ export function useAxiosGet(endpointURL) {
                 })
         },
         [endpointURL]
+    )
+
+    useInterval(
+        () => {
+            setRequest({
+                loading: true,
+                data: null,
+                error: false,
+            })
+            axios.get(endpointURL)
+                .then(response => {
+                    setRequest({
+                        loading: false,
+                        data: response.data,
+                        error: false,
+                    })
+                })
+                .catch(() => {
+                    setRequest({
+                        loading: false,
+                        data: null,
+                        error: true,
+                    })
+                })
+        },
+        300000
     )
 
     return request
