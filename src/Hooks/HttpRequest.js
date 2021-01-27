@@ -8,7 +8,6 @@ export function useAxiosGet(endpointURL) {
         data: null,
         error: false,
     })
-    const timeout = useRef()
 
     useEffect(
         () => {
