@@ -6,7 +6,7 @@
 }
 
 body {
-    background: rgba(8, 8, 8, 0.95);
+    background: #141414;
     color: #FFFFFF;
     font-family: 'Lato', sans-serif;
     height: 100%;
@@ -14,6 +14,14 @@ body {
 
 html, #root, .App {
     height: 100%;
+}
+
+.loader-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1040;
 }
 
 .navigation {
@@ -34,6 +42,16 @@ html, #root, .App {
     background: rgba(8, 8, 8, 0.45);
 }
 
+/* Changes to bootstrap classes */
 .progress {
     background:rgba(255, 255, 255, 0.05);
+    height: .8rem;
+}
+
+.alert-danger {
+    background-color: #141414;
+    border-color: #DC3545;
+}
+small {
+    font-size: 14px
 }
