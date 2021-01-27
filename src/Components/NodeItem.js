@@ -1,10 +1,4 @@
 import React from 'react'
-import {
-    Provider,
-    defaultTheme,
-    Button,
-    Meter
-} from '@adobe/react-spectrum';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom';
 
@@ -62,11 +56,11 @@ function NodeItem(props) {
 
             <div className="row node-item-title mb-4 d-flex align-items-center justify-content-between">
                 <div className="col-sm-6 col-6 d-block">
-                    <h5 className="name p-0 m-0">
+                    <h5 className="p-0 m-0">
                         Node {props.data.id}
                     </h5>
-                    <small className="text-muted p-0">
-                        Active Since: {upSince.getDay()+1} {monthNames[upSince.getMonth()]}, {upSince.getFullYear()}
+                    <small className="text-muted p-0 font-weight-light">
+                        Active since {monthNames[upSince.getMonth()]} {upSince.getDay()+1}, {upSince.getFullYear()}
                     </small>
                 </div>
                 <div class="col-sm-6 col-6 d-flex justify-content-end">
@@ -76,11 +70,11 @@ function NodeItem(props) {
                 </div>
             </div>
 
-            <div className="row progress-labels pb-2 d-flex justify-content-between text-light">
-                <div class="col meter-label text-muted">
+            <div className="row progress-labels pb-2 d-flex justify-content-between text-light font-weight-light">
+                <div class="col meter-label">
                     RAM
                 </div>
-                <div class="col meter-value text-right text-muted">
+                <div class="col meter-value text-right">
                     {ramUsage}%
                 </div>
             </div>
@@ -90,11 +84,11 @@ function NodeItem(props) {
                 </div>
             </div>
 
-            <div className="row progress-labels pb-2 d-flex justify-content-between text-light">
-                <div class="col meter-label text-muted">
+            <div className="row progress-labels pb-2 d-flex justify-content-between text-light font-weight-light">
+                <div class="col meter-label">
                     Storage
                 </div>
-                <div class="col meter-value text-right text-muted">
+                <div class="col meter-value text-right">
                     {ramUsage}%
                 </div>
             </div>
