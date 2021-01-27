@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+:root {
+    --brand1: #00A9ff;
+    --brand2: #080808;
+}
+
 body {
-    background: #343A40;
+    background: rgba(8, 8, 8, 0.95);
     color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+}
+
+html, #root, .App {
+    height: 100%;
+}
+
+.navigation {
+    background: var(--brand2);
+    height: 60px;
+}
+
+.logo > img {
+    width: auto;
+    height: 36px;
+}
+
+.navigation-title {
+    font-size: 20px;
+}
+
+.node-item {
+    background: rgba(8, 8, 8, 0.45);
+}
+
+.progress {
+    background:rgba(255, 255, 255, 0.05);
 }
