@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../logo.png'
 
 function Navigation() {
@@ -9,7 +10,7 @@ function Navigation() {
             </div>
             <div className="col p-0">
                 <span className="navigation-title">
-                    Node Dashboard
+                    <Link to="/">Node Dashboard</Link>
                 </span>
             </div>
         </div>
