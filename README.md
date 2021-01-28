@@ -2,6 +2,8 @@
 
 A simple dashboard for viewing server node statistics.
 
+You can read my thought process log [here](THOUGHT_LOG.md).
+
 ## Features
 
  - [x] Pagination support
