@@ -2,7 +2,7 @@ import React from 'react'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 
 function Meter(props) {
-    let variant;
+    let variant
 
     if (props.value < 50) {
         variant = "success"
