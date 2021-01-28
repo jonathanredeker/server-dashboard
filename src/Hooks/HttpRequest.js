@@ -8,32 +8,7 @@ export function useAxiosGet(endpointURL) {
         data: null,
         error: false,
     })
-
-    useEffect(() => {
-        // Replace this
-        setRequest({
-            loading: true,
-            data: null,
-            error: false,
-        })
-        axios.get(endpointURL)
-            .then(response => {
-                setRequest({
-                    loading: false,
-                    data: response.data,
-                    error: false,
-                })
-            })
-            .catch(() => {
-                setRequest({
-                    loading: false,
-                    data: null,
-                    error: true,
-                })
-            })
-        },
-        [endpointURL]
-    )
+    const [timeout, setTimeout] = useState(0)
 
     useInterval(() => {
         setRequest({
@@ -50,14 +25,18 @@ export function useAxiosGet(endpointURL) {
                 })
             })
             .catch(() => {
+                
                 setRequest({
                     loading: false,
                     data: null,
                     error: true,
                 })
             })
+        if (timeout == 0) {
+            setTimeout(300000)
+        }
         },
-        300000
+        timeout
     )
     return request
 }
