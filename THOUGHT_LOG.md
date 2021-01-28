@@ -15,3 +15,4 @@
 - I had to write a hook, useAxiosGetTotalNodes, to query the amount of nodes in endpoint’s response. I need this for my method of pagination.
 - I need the pagination dropdown to be scalable. Right now it lists every possible page. If we had even as little as 20 pages, the dropdown would look bloated. I'm going to take a slightly different approach to this.
 - I'm having troubles accessing the endpoint. I’m nearly done; I just want to finish the NodeDetails view and polish the project a bit. However, I think this my cue to take a break.
+- I've finished the NodeDetails page and took the design from NodeItem. The page looks a little bare. I wish there was more data so I could add more metrics to the page. I've also added an Error component, in case it were to every be expanded upon on the future.
