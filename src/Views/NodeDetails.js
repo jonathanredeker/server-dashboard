@@ -26,8 +26,8 @@ function NodeDetails() {
         upSince = new Date(node.data.up_since)
 
         content = 
-            <div className="row d-flex justify-content-center m-0 mt-5 mb-5">
-                <div className="node-details col-lg-8 mt-2 rounded p-4">
+            <div className="row d-flex justify-content-center m-0 mt-5 mb-5 ml-5 mr-5">
+                <div className="col-lg-8 node-details mt-2 rounded p-4">
                     <div className="row node-item-title mb-4 d-flex align-items-center justify-content-between" key={node.data.id}>
                         <div className="col-sm-6 col-6 d-block">
                             <h5 className="p-0 m-0">
