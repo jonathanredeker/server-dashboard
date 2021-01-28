@@ -9,6 +9,7 @@ function DashboardToolbar(props) {
         dropdowns.push(
             <Dropdown.Item 
                 href={`/${props.page - 1}/${props.limit}`}
+                key="1"
             >
                 Page {props.page - 1}
             </Dropdown.Item>)
@@ -17,6 +18,7 @@ function DashboardToolbar(props) {
     dropdowns.push(
         <Dropdown.Item 
             href={`/${props.page}/${props.limit}`}
+            key="2"
         >
             Page {props.page}
         </Dropdown.Item>)
@@ -25,6 +27,7 @@ function DashboardToolbar(props) {
         dropdowns.push(
             <Dropdown.Item 
                 href={`/${props.page + 1}/${props.limit}`}
+                key="3"
             >
                 Page {props.page + 1}
             </Dropdown.Item>)
@@ -38,11 +41,11 @@ function DashboardToolbar(props) {
                     title={`Page ${props.page}`}
                     size="sm"
                 >
-                    <Dropdown.Item href={`/1/${props.limit}`}>First Page</Dropdown.Item>
+                    <Dropdown.Item href={`/1/${props.limit}`} key="0">First Page</Dropdown.Item>
                     <Dropdown.Divider />
                     {dropdowns}
                     <Dropdown.Divider />
-                    <Dropdown.Item href={`/${Math.ceil(props.totalNodes / props.limit)}/${props.limit}`}>Last Page</Dropdown.Item>
+                    <Dropdown.Item href={`/${Math.ceil(props.totalNodes / props.limit)}/${props.limit}`} key="4">Last Page</Dropdown.Item>
                 </DropdownButton>
             </div>
             <div className="col-sm-auto mt-2 ml-3 p-0">
