@@ -11,9 +11,9 @@ function NodeItem(props) {
     const upSince = new Date(props.data.up_since)
 
     return (
-        <div className="node-item ml-4 mr-4 col-lg-5 rounded p-4 mt-4" key={props.data.key}>
+        <div className="col-lg-5 node-item ml-4 mr-4 rounded p-4 mt-4" key={props.data.key}>
             <div className="row node-item-title mb-4 d-flex align-items-center justify-content-between">
-                <div className="col-sm-6 col-6 d-block">
+                <div className="col-sm-6 col-6">
                     <h5 className="p-0 m-0">
                         Node {props.data.id}
                     </h5>
