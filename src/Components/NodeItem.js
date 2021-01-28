@@ -1,6 +1,6 @@
 import React from 'react'
-import ProgressBar from 'react-bootstrap/ProgressBar'
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import Meter from '../Components/Meter'
 
 function NodeItem(props) {
 
@@ -33,27 +33,8 @@ function NodeItem(props) {
         "December"
     ]
 
-    let ramMeterVariant;
-    let diskMeterVariant;
-    if (ramUsage < 50) {
-        ramMeterVariant = "success"
-    } else if (ramUsage < 80) {
-        ramMeterVariant = "warning"
-    } else {
-        ramMeterVariant = "danger"
-    }
-    if (diskUsage < 50) {
-        diskMeterVariant = "success"
-    } else if (diskUsage < 80) {
-        diskMeterVariant = "warning"
-    } else {
-        diskMeterVariant = "danger"
-    }
-
     return (
-
         <div className="node-item ml-4 mr-4 col-lg-5 rounded p-4 mt-4" key={props.data.key}>
-
             <div className="row node-item-title mb-4 d-flex align-items-center justify-content-between">
                 <div className="col-sm-6 col-6 d-block">
                     <h5 className="p-0 m-0">
@@ -63,46 +44,22 @@ function NodeItem(props) {
                         Active since {monthNames[upSince.getMonth()]} {upSince.getDay()+1}, {upSince.getFullYear()}
                     </small>
                 </div>
-                <div class="col-sm-6 col-6 d-flex justify-content-end">
+                <div className="col-sm-6 col-6 d-flex justify-content-end">
                     <Link to={`/node/${props.data.id}`}>
-                        <button type="button" class="btn btn-outline-primary">View Details</button>
+                        <button type="button" className="btn btn-outline-primary">View Details</button>
                     </Link>
                 </div>
             </div>
-
-            <div className="row progress-labels pb-2 d-flex justify-content-between text-light font-weight-light">
-                <div class="col meter-label">
-                    RAM
-                </div>
-                <div class="col meter-value text-right">
-                    {ramUsage}%
-                </div>
-            </div>
-            <div class="row pb-3">
-                <div class="col">
-                    <ProgressBar animated variant={ramMeterVariant} now={ramUsage}/>
-                </div>
-            </div>
-
-            <div className="row progress-labels pb-2 d-flex justify-content-between text-light font-weight-light">
-                <div class="col meter-label">
-                    Storage
-                </div>
-                <div class="col meter-value text-right">
-                    {ramUsage}%
-                </div>
-            </div>
-            <div class="row pb-2">
-                <div class="col">
-                    <ProgressBar animated variant={diskMeterVariant} now={diskUsage}/>
-                </div>
-            </div>
-
-
+            <Meter
+                label="RAM"
+                value={ramUsage}
+            />
+            <Meter
+                label="Disk"
+                value={diskUsage}
+            />
         </div>
-
     )
-
 }
 
 export default NodeItem
