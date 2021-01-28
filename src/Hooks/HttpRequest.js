@@ -63,3 +63,25 @@ export function useAxiosGet(endpointURL) {
 
     return request
 }
+
+export function useAxiosGetTotalNodes() {
+    const endpointURL = `https://600f10ec6c21e1001704e67a.mockapi.io/api/v1/stats`
+    const [nodeCount, setNodeCount] = useState(0)
+
+    useEffect(
+        () => {
+            axios.get(endpointURL)
+                .then(response => {
+                    if (response.data) {
+                        setNodeCount(response.data.length)
+                    }
+                })
+                .catch(() => {
+                    setNodeCount(0)
+                })
+        },
+        [endpointURL]
+    )
+
+    return nodeCount
+}
