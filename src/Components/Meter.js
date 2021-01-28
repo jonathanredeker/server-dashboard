@@ -19,7 +19,7 @@ function Meter(props) {
                     {props.label}
                 </div>
                 <div className="col meter-value text-right">
-                    {props.value}%
+                    {props.labelValue}
                 </div>
             </div>
             <div className="row pb-3">
