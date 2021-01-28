@@ -42,6 +42,10 @@ html, #root, .App {
     background: rgba(8, 8, 8, 0.45);
 }
 
+.node-details {
+    background: rgba(8, 8, 8, 0.45);
+}
+
 /* Changes to bootstrap classes */
 .progress {
     background:rgba(255, 255, 255, 0.05);
@@ -52,6 +56,14 @@ html, #root, .App {
     background-color: #141414;
     border-color: #DC3545;
 }
+
+.navigation-title a,
+.navigation-title a:hover,
+.navigation-title a:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 small {
     font-size: 14px
 }
