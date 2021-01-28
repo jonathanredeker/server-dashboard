@@ -14,4 +14,4 @@
 - It’s time to start adding the pagination and a way to limit the amount of results on the NodeDashboard view. I’m going to put these in their own separate component called DashboardToolbar.
 - I had to write a hook, useAxiosGetTotalNodes, to query the amount of nodes in endpoint’s response. I need this for my method of pagination.
 - I need the pagination dropdown to be scalable. Right now it lists every possible page. If we had even as little as 20 pages, the dropdown would look bloated. It would eventually stretch out of the viewport and become unusable. I'm going to take a slightly different approach to this.
-- I'm having troubles accessing the endpoint from. I’m nearly done; I just want to finish the NodeDetails view and polish the project a bit. However, I think this my cue to take a break.
+- I'm having troubles accessing the endpoint. I’m nearly done; I just want to finish the NodeDetails view and polish the project a bit. However, I think this my cue to take a break.
