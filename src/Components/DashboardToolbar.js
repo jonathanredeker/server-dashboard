@@ -42,7 +42,7 @@ function DashboardToolbar(props) {
                     <Dropdown.Divider />
                     {dropdowns}
                     <Dropdown.Divider />
-                    <Dropdown.Item href={`/${props.totalNodes / props.limit}/${props.limit}`}>Last Page</Dropdown.Item>
+                    <Dropdown.Item href={`/${Math.ceil(props.totalNodes / props.limit)}/${props.limit}`}>Last Page</Dropdown.Item>
                 </DropdownButton>
             </div>
             <div className="col-sm-auto mt-2 ml-3 p-0">
