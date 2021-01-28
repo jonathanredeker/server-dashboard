@@ -1,6 +1,6 @@
 # My Thought Process Log
 
-- I’ve setup my Git repository locally and make my initial push.
+- I’ve setup my Git repository locally and made my initial push.
 - I need to design a dashboard layout to display the given data; on some grid paper, I’m going to start a rough sketch to get an idea of how the project will look and function.
 - I’d like to have two views: the dashboard and a node details page. The details page would be used to view specific information about the selected node.
 - Now that I have an idea of how it will look and function, I’m going to start my React application.
