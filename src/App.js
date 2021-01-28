@@ -5,11 +5,8 @@ import NodeDashboard from './Views/NodeDashboard'
 import NodeDetails from './Views/NodeDetails'
 
 function App() {
-
     return (
-
         <BrowserRouter>
-
             <div className="container-fluid p-0 pb-5">
                 <Navigation />
                 <Switch>
@@ -27,12 +24,8 @@ function App() {
                     </Route>
                 </Switch>
             </div>
-
-
         </BrowserRouter>
-
     )
-    
 }
 
 export default App;
